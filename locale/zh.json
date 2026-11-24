@@ -1,0 +1,1 @@
+{"meta": {"title": "会话删除", "description": "在侧边栏右键菜单中真正删除会话，包括当前正打开、有 agent 正在运行的那个。会话目录被移入 sessions-trash（可手工搬回恢复），列表即时摘行、不整页刷新；若删的是当前会话，主视图退回空状态。", "detail": "docs/DETAIL.md"}}

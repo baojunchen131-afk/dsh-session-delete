@@ -1,0 +1,69 @@
+{
+  "name": "@baojun/dsh-session-delete",
+  "version": "1.0.0",
+  "description": "Really delete a DeepSeek Harness session, including the one currently open with a running agent. The directory is moved into sessions-trash (restorable by hand), the sidebar row drops without a page reload, and the main view returns to the empty state. 真正删除 DSH 会话（含正在运行的当前会话）：目录移入 sessions-trash、列表即时摘行、主视图退回空状态，不整页刷新。",
+  "icon": "icon.svg",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "cordis",
+    "plugin",
+    "session",
+    "session-management",
+    "delete",
+    "cleanup",
+    "会话删除"
+  ],
+  "license": "MIT",
+  "author": "baojun",
+  "homepage": "https://github.com/baojun/dsh-session-delete#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baojun/dsh-session-delete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baojun/dsh-session-delete/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-alpha.1"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  }
+}

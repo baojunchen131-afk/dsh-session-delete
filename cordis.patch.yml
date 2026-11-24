@@ -1,0 +1,7 @@
+# @baojun/dsh-session-delete bundle patch — mount the plugin into the DSH config tree.
+# id is a bare unique name; name must match package.json name verbatim (it is both
+# the Host module name and the browser /plugins/<name>/client.js id).
+# Keep the id/name lines free of trailing comments (market submission precheck).
+- insert:
+    - id: dsh-session-delete
+      name: '@baojun/dsh-session-delete'
